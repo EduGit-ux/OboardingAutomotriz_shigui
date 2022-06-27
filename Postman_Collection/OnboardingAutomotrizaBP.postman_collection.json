@@ -1,0 +1,676 @@
+{
+	"info": {
+		"_postman_id": "d126a74c-2af4-4805-a72b-f02511e7b4dd",
+		"name": "OnboardingAutomotrizaBP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CargarDatosInicial",
+			"item": [
+				{
+					"name": "CargarClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/CargarDatos/CargarDatosIniciales/cl",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"CargarDatos",
+								"CargarDatosIniciales",
+								"cl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CargarMarcas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/CargarDatos/CargarDatosIniciales/mc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"CargarDatos",
+								"CargarDatosIniciales",
+								"mc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CargarEjecutivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/CargarDatos/CargarDatosIniciales/ej",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"CargarDatos",
+								"CargarDatosIniciales",
+								"ej"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AsignacionCliente",
+			"item": [
+				{
+					"name": "AsignarCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"asIdCliente\": 5,\r\n  \"asIdPatio\": 3,\r\n  \"asFechaAsignacion\": \"2022-06-23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/AsignacionClientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"AsignacionClientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarAsignacionCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"asId\": 1,\r\n  \"asIdCliente\": 10,\r\n  \"asIdPatio\": 1,\r\n  \"asFechaAsignacion\": \"2022-12-22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/AsignacionClientes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"AsignacionClientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SolicitudCredito",
+			"item": [
+				{
+					"name": "CrearSolicitudCredito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"scIdCliente\": 8,\r\n  \"scIdPatio\": 2,\r\n  \"scIdVehiculo\": 3,\r\n  \"scMesesPlazo\": 36,\r\n  \"scCuotas\": 20,\r\n  \"scEntrada\": 8000,\r\n  \"scIdEjecutivo\": 16,\r\n  \"scObservacion\": \"Validar observaciones\",\r\n  \"scEstado\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/SolicitudCreditoes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"SolicitudCreditoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultarSolicitudCredito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/SolicitudCreditoes/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"SolicitudCreditoes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehiculos",
+			"item": [
+				{
+					"name": "CrearVehiculos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"vePlaca\": \"PCY-1259\",\r\n  \"veModelo\": \"Sedan\",\r\n  \"veMarcaId\": 2,\r\n  \"veTipo\": \"Sub\",\r\n  \"veCilindraje\": \"5000\",\r\n  \"veAvaluo\": \"30000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Vehiculoes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Vehiculoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultarVehiculo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Vehiculoes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Vehiculoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarVehiculo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"veId\": 1003,\r\n  \"vePlaca\": \"XYJ-4521\",\r\n  \"veModelo\": \"Vehiculo\",\r\n  \"veMarcaId\": 2,\r\n  \"veTipo\": \"Tipo\",\r\n  \"veCilindraje\": \"Cilindrage\",\r\n  \"veAvaluo\": \"Avaluo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Vehiculoes/1003",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Vehiculoes",
+								"1003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarVehiculo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Vehiculoes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Vehiculoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marcas",
+			"item": [
+				{
+					"name": "EditarMarca",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maIdMarca\": 7,\r\n  \"maMarcaAuto\": \"Chery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Marcas/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Marcas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearMarca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maMarcaAuto\": \"Chery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Marcas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarMarca",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Marcas/1002",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Marcas",
+								"1002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaMarca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Marcas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Marcas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patios",
+			"item": [
+				{
+					"name": "CrearPatio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"paNombre\": \"Centro Quito\",\r\n  \"paDireccion\": \"La Marin central\",\r\n  \"paTelefono\": \"098653652\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Patios/patio",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Patios",
+								"patio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultarPatio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Patios/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Patios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarPatio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"paId\": 3,\r\n  \"paNombre\": \"Centro Quito\",\r\n  \"paDireccion\": \"La Marin central\",\r\n  \"paTelefono\": \"0986598562\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Patios/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Patios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ElimimarPatio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Patios/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Patios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "CrearCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"clIdentificacion\": \"string\",\r\n  \"clNombres\": \"string\",\r\n  \"clApellidos\": \"string\",\r\n  \"clEdad\": \"string\",\r\n  \"clFechaNacimiento\": \"2022-06-24\",\r\n  \"clDireccion\": \"string\",\r\n  \"clTelefono\": \"string\",\r\n  \"clEstadoCivil\": \"string\",\r\n  \"clIdentificacionConyuge\": \"string\",\r\n  \"clNombreConyuge\": \"string\",\r\n  \"clSujetoCredito\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Clientes/19",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModifcarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"clIdCliente\": 21,\r\n  \"clIdentificacion\": \"0503698564\",\r\n  \"clNombres\": \"Gabriel\",\r\n  \"clApellidos\": \"Moreno\",\r\n  \"clEdad\": \"30\",\r\n  \"clFechaNacimiento\": \"2022-06-24\",\r\n  \"clDireccion\": \"La Napo\",\r\n  \"clTelefono\": \"986584542\",\r\n  \"clEstadoCivil\": \"solter\",\r\n  \"clIdentificacionConyuge\": \"\",\r\n  \"clNombreConyuge\": \"\",\r\n  \"clSujetoCredito\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Clientes/21",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Clientes/20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ejecutivo",
+			"item": [
+				{
+					"name": "CrearEjecutivo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"ejIdPatio\": 2,\r\n  \"ejIdentificacion\": \"string\",\r\n  \"ejNombre\": \"string\",\r\n  \"ejApellido\": \"string\",\r\n  \"ejDireccion\": \"string\",\r\n  \"ejTelefono\": \"string\",\r\n  \"ejCelular\": \"string\",\r\n  \"ejEdad\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Ejecutivoes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Ejecutivoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultarEjecutivo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Ejecutivoes/23",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Ejecutivoes",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarEjecutivo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"ejId\": 23,\r\n  \"ejIdPatio\": 1,\r\n  \"ejIdentificacion\": \"modifiar\",\r\n  \"ejNombre\": \"modificar\",\r\n  \"ejApellido\": \"modificar\",\r\n  \"ejDireccion\": \"modifdicar\",\r\n  \"ejTelefono\": \"modificar\",\r\n  \"ejCelular\": \"modificar\",\r\n  \"ejEdad\": \"modificar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/Ejecutivoes/23",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Ejecutivoes",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarEjecutivo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/Ejecutivoes/23",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"Ejecutivoes",
+								"23"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
